@@ -1,0 +1,16 @@
+{%  extends 'main/base.html' %}
+
+{% block title %}
+Creating store
+{% endblock %}
+
+{% block content %}
+    <h1>Create</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.description }}<br>
+        <button type="submit" class="btn btn-success">Add</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

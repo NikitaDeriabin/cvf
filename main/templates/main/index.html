@@ -1,0 +1,20 @@
+{%  extends 'main/base.html' %}
+
+{% block title %}
+ {{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <h1>Main</h1>
+    {% if stores %}
+        {% for el in stores %}
+            <div class = "alert alert-warning mt-2">
+                <h3>{{ el.name }}</h3>
+                <p>{{ el.description }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No store</p>
+    {% endif %}
+{% endblock %}
